@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="/Scripts/angular-route.min.js"></script>
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="MainController.js"></script>
+    <script src="/Modules/Home/HomeController.js"></script>
+    <script src="/Modules/Products/ProductController.js"></script>
+    <link rel="stylesheet" href="/Content/bootstrap.css"/>
+    <script src="scripts/bootstrap.min.js"></script>
+</head>
+
+    
+<body ng-controller="MainController as vm" >
+<div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/#/product">HudShop</a>
+    </div>
+    <div id="navbar" class="navbar-padding" >
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="/#/home">
+                    <span class="glyphicon glyphicon-home"></span>
+                    Home
+                </a>
+            </li>  
+            <li>
+                <a href="/#/product">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    Products
+                </a>
+            </li>        
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right navbar-padding-right">
+            <li>
+                <a href="/#/home">
+                    Login
+                </a>
+            </li>
+            <li>
+                <a href="/#/product">
+                    Register
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+
+</div>
+<div class="panel-body container panel-style bodypadding col-lg-12">
+    <ul class="nav navbar-right">
+        <li>
+            <a>
+                Shopping Cart
+            </a>
+        </li>
+    </ul>
+</div>
+    
+
+
+
+<div id="main" class="bodypadding">
+    <div ng-view></div>
+</div>
+</body>
+</html>
