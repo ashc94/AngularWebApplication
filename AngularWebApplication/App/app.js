@@ -1,7 +1,9 @@
-﻿(function () {
-    'use strict';
+﻿
 
-    var app = angular.module('app', ['ngRoute']);
+(function () {
+    
+
+    var app = angular.module('app', ["common.services","ngRoute"]);
 
     app.config(function ($routeProvider) {
         $routeProvider
@@ -17,8 +19,11 @@
                 templateUrl: 'Modules/Products/ProductView.html',
                 controller: 'ProductController as vm'
             })
+
         .otherwise("/home");
     });
+
+    
 
 
 

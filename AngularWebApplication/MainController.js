@@ -5,4 +5,3 @@ var MainController = (function () {
     return MainController;
 }());
 angular.module("app").controller("MainController", MainController);
-//# sourceMappingURL=MainController.js.map

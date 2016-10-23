@@ -1,13 +1,22 @@
 ﻿
+
+
+
+
 interface IHomeController {
     example: string;
 }
 
 class HomeController implements IHomeController {
+
+    
     example: string;
 
-    constructor() {
-        this.example = "Hello World";
+    static $inject = ["dataService"];
+    constructor(private dataService: app.common.services.DataService) {
+        
+        this.dataService = dataService;
+        this.dataService.getAllProducts();
     }
 }
 

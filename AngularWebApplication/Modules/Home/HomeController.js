@@ -1,8 +1,10 @@
 var HomeController = (function () {
-    function HomeController() {
-        this.example = "Hello World";
+    function HomeController(dataService) {
+        this.dataService = dataService;
+        this.dataService = dataService;
+        this.dataService.getAllProducts();
     }
+    HomeController.$inject = ["dataService"];
     return HomeController;
 }());
 angular.module("app").controller("HomeController", HomeController);
-//# sourceMappingURL=HomeController.js.map

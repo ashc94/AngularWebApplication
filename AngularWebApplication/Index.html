@@ -4,9 +4,12 @@
 <head>
     <script src="/Scripts/angular.min.js"></script>
     <script src="/Scripts/angular-route.min.js"></script>
+    <script src="/Scripts/angular-resource.js"></script>
     <script src="/Scripts/jquery-3.1.1.min.js"></script>
     <script src="/app/app.js"></script>
     <script src="MainController.js"></script>
+    <script src="/Modules/Service/Services.js"></script>
+    <script src="/Modules/Service/DataService.js"></script>
     <script src="/Modules/Home/HomeController.js"></script>
     <script src="/Modules/Products/ProductController.js"></script>
     <link rel="stylesheet" href="/Content/bootstrap.css"/>
@@ -14,7 +17,7 @@
 </head>
 
     
-<body ng-controller="MainController as vm" >
+<body ng-controller="MainController as vm" class="col-lg-12 col-md-12 col-sm-12" >
 <div class="navbar navbar-inverse navbar-static-top">
     <div class="navbar-header">
         <a class="navbar-brand" href="/#/product">HudShop</a>
@@ -51,10 +54,10 @@
     </div>
 
 </div>
-<div class="panel-body container panel-style bodypadding col-lg-12">
-    <ul class="nav navbar-right">
+<div class="panel-body container panel-style bodypadding navbar-padding-right col-lg-12 col-md-12 col-sm-12">
+    <ul class="nav navbar-right navbar-padding-right">
         <li>
-            <a>
+            <a class="cart-color">
                 Shopping Cart
             </a>
         </li>
@@ -62,10 +65,13 @@
 </div>
     
 
-
-
-<div id="main" class="bodypadding">
-    <div ng-view></div>
+<div id="main" class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 min-height">
+    <div class="panel-body body-panel-style min-height">
+        <div ng-view></div>
+    </div>
+</div>
+<div class="panel-style footer col-lg-12 col-md-12 col-sm-12 panel-body  ">
 </div>
 </body>
+
 </html>
