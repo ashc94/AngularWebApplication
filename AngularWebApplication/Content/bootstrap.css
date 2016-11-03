@@ -12,10 +12,30 @@ html {
     margin: 0;
 }
 body {
-  margin: 0;
-  padding: 0;
-
+  margin: 0 !important;
+  padding: 0 !important;
+  background:#D4D4D4 !important;
   
+}
+.test{
+	background:red;
+}
+.navbar-wrapper{
+	
+	 position:relative !important;
+	 height:400px !important;
+}
+.navbar-element{
+	 background:transparent;
+	 position:absolute !important;
+	 bottom:0 !important;
+	 padding:0 !important;
+}
+.navbar-items{
+	display:block;
+	text-align:center !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
 }
 .img-overflow {
     overflow: hidden !important;
@@ -23,6 +43,12 @@ body {
 
 .bodypadding {
     padding-top: 60px;
+}
+.nav-bar-style{
+	
+}
+.home{
+	height:100%;
 }
 .min-height {
     min-height: 900px !important;

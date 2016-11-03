@@ -1,10 +1,15 @@
 ﻿
 <body ng-controller="ProductController as vm">
-    <div class="panel col-lg-3 panel-style">
-        <div class="panel-body ">
-            <h2>{{vm.example}}</h2>
-            <button ng-click="vm.getProducts()">Hello</button>
-        </div>
+            
+<button ng-click="vm.getProducts()">Hello</button>
+    
+<div ng-repeat="p in vm.productArray">
+    <div ng-repeat="v in p">
+        <h1>{{v.ProductName}}</h1>
     </div>
+    
+</div>
+
+        
 </body>
 

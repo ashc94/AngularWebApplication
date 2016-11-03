@@ -1,23 +1,42 @@
 ﻿
+class Product {
+    ProductName: string;
+
+}
+
 interface IProductController {
-    example: string;
+    productArray: Array<Object>;
+    product: Product;
+    example:string;
     getProducts():void;
 }
 
+const typeMapping: any = {
+    'textTool': Product
+    //all other types
+};
+
 class ProductController implements  IProductController
 {
-    example: string;
+    productArray: Array<Object>;
+    product: Product;
+    example:string;
     static $inject = ["$http"];
     constructor(private $http: angular.IHttpService) {
-        this.example = "Product World";
         this.$http = $http;
+        
     }
 
+   
+
     getProducts(): void {
-        this.$http.get('Data/Product.php')
-            .success(response => {
-                this.example = response.toString();
+        this.$http.get('http://localhost/HudShop/Product.php')
+            .then(p => {
+                this.productArray = new Array<Object>(p.data);
+
+
             });
+
 
     }
 }
